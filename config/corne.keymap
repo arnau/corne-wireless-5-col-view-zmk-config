@@ -101,7 +101,7 @@
                 &none     &kp HASH  &kp TILDE2         &kp KP_LPAR     &kp KP_RPAR        &kp BSLH    &kp N7       &kp N8      &kp N9    &kp COMMA
                 &none     &none     &kp KP_MULTIPLY    &kp KP_PLUS     &kp EQL            &kp N0      &kp N4       &kp N5      &kp N6    &kp DOT
                 &none     &none     &kp KP_DIVIDE      &kp KP_MINUS    &none              &kp SEMI    &kp N1       &kp N2      &kp N3    &kp KP_DIVIDE
-                                    &kp LGUI           &mo 1           &kp RET            &lt 0 SPACE   &kp RSHFT    &kp RALT 
+                                    &kp LGUI           &to 0           &kp RET            &lt 0 SPACE   &kp RSHFT    &kp RALT 
             >;
            
         };
