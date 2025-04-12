@@ -39,17 +39,11 @@
             // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
             //             | GUI | LWR | ENT |     | SPC | RSE  | BSPC |
 
-            // bindings = <
-            //     AS(Q)    AS(W)    AS(E)     AS(R)    AS(T)          AS(Y)        AS(U)    AS(I)       AS(O)       AS(P)
-            //     AS(A)    AS(S)    AS(D)     AS(F)    AS(G)          &kp H        &kp J    &kp K       &kp L       AS(SQT)
-            //     AS(Z)    AS(X)    AS(C)     AS(V)    AS(B)          AS(N)        AS(M)    &kp LCTL    &kp RALT    AS(DOT)
-            //                       &kp LGUI  &mo 1    &lt 4 RET      &lt 3 SPACE  &mo 2    &kp LSHFT 
-            // >;
             bindings = <
-                &kp Q          &kp W          &kp E          &kp R    &kp T          &kp Y        &kp U    &kp I        &kp O         &kp P
-                &mt LCTRL A    &mt LSHFT S    &mt LALT D     &kp F    &kp G          &kp H        &kp J    &mt RALT K   &mt RSHFT L   &mt RCTRL SQT
-                &kp Z          &kp X          &kp C          &kp V    &kp B          &kp N        &kp M    &kp LCTL     &kp RALT      &kp DOT
-                                  &kp LGUI  &mo 1    &lt 4 RET      &lt 3 SPACE  &mo 2    &kp BSPC 
+                &kp Q          &kp W          &kp E          &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O         &kp P
+                &mt LCTRL A    &mt LSHFT S    &mt LALT D     &kp F    &kp G          &kp H        &kp J       &mt RALT K   &mt RSHFT L   &mt RCTRL SQT
+                &kp Z          &kp X          &kp C          &kp V    &kp B          &kp N        &kp M       &kp LC(A)    &kp RALT      &kp DOT
+                                              &kp LGUI       &mo 1    &lt 3 ESC      &lt 1 SPACE  &lt 2 RET   &kp BSPC 
             >;
         };
 
@@ -65,8 +59,8 @@
             bindings = <
                 &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-                &bt BT_CLR   &trans       &trans       &trans       &trans           &kp BSPC    &to 0    &to 3          &to 4     &trans 
-                                          &kp LGUI     &trans       &kp RET          &kp SPACE   &kp ESC   &kp TAB
+                &bt BT_CLR   &trans       &trans       &trans       &trans           &kp BSPC    &to 0    &to 3          &trans    &trans 
+                                          &kp LGUI     &trans       &kp RET          &kp ESC     &kp LS(TAB)   &kp TAB
             >;
         };
 
@@ -83,7 +77,7 @@
                 AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
                 AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
                 AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                                   &kp LGUI  &kp ESC   &kp RET     &kp SPACE   &trans    &kp TAB
+                                    &kp LGUI  &kp ESC   &kp RET     &kp SPACE   &trans    &kp TAB
             >;
         };
 
