@@ -34,15 +34,15 @@
             display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P  |
-            // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | '  | 
-            // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | .: |
-            //             | GUI | LWR | ENT |     | SPC | RSE  | BSPC |
+            // |  Q    |  W    |  E  | R   | T   |     | Y   | U   | I    | O  | P    |
+            // |  A    |  S LS |  D  | F   | G   |     | H   | J   | K    | L  | ,'   | 
+            // |  Z LC |  X LA |  C  | V   | B   |     | N   | M   | LC+A | RA | . RC |
+            //                 | GUI | LWR | ESC |     | SPC | RET | BSPC |
 
             bindings = <
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O         &kp P
-                &mt LCTRL A   &mt LSHFT S    &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &mt RSHFT L   &mt RCTRL SQT
-                &kp Z         &mt LALT X     &kp C       &kp V    &kp B          &kp N        &kp M       &kp LC(A)    &kp RALT      &mt COLON DOT
+                &kp A         &mt LSHFT S    &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &mt RSHFT L   &mt SQT COMMA
+                &mt LCTRL Z   &mt LALT X     &kp C       &kp V    &kp B          &kp N        &kp M       &kp LC(A)    &kp RALT      &mt RCTRL DOT
                                              &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
             >;
         };
@@ -51,16 +51,16 @@
             display-name = "Lower";
 
             // -----------------------------------------------------------------------------------------
-            // | !   | @  | #  | $   | %   |     |          |  ^  |  &     | *   | (   | )  |
-            // | LC  | LS | L0 | L3  | L4  |     |          | LFT | DWN    | UP  | RGT | =+ |
-            // | BT0 | LA |    |     |     |     |          |     |        |     |     | ;, |
+            // | !   | @  | #  | $   | %   |     |          | ^   | &      | *   | (   | ) |
+            // | BT0 | LS | L0 | L3  | L4  |     |          | LFT | DWN    | UP  | RGT | = |
+            // | LC  | LA |    |     |     |     |          | |   |        |     | RA  | ; |
             //                 | GUI |     | ESC |          | SPC | LS+TAB | TAB |
 
             bindings = <
-                &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
-                &kp LCTRL    &kp LSHFT    &to 0        &to 3        &to 4            &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &mt EQUAL PLUS 
-                &bt BT_SEL 0 &kp LALT     &none        &none        &none            &kp BSPC    &none         &none      &kp RALT   &mt SEMI COMMA 
-                                          &kp LGUI     &trans       &trans           &trans      &kp LS(TAB)   &kp TAB
+                &kp EXCL      &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
+                &bt BT_SEL 0  &kp LSHFT    &to 0        &to 3        &to 4            &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
+                &kp LCTRL     &kp LALT     &none        &none        &none            &kp PIPE    &none         &none      &kp RALT   &kp SEMI 
+                                           &kp LGUI     &trans       &trans           &trans      &kp LS(TAB)   &kp TAB
             >;
         };
 
@@ -68,16 +68,16 @@
             display-name = "Raise";
 
             // -----------------------------------------------------------------------------------------
-            // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-            // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-            // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-            //            | GUI | ESC | SPC |     | ENT |     | TAB |
+            // | 1! |  2@ |  3# |  4$ |  5% |     | 6^  | 7&  |  8* |  9(  |  0)  |
+            // | -_ |  =+ |  {  |  [  |  (  |     | )   | ]   |  }  |  /?  |  \|  |
+            // | `~ |     |     |  ,< |  :  |     | <   | >   | CTRL| META |      |
+            //            | GUI | ESC | SPC |     | SPC | RET | TAB |
 
             bindings = <
                 AS(N1)    AS(N2)    AS(N3)      AS(N4)      AS(N5)            AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
                 AS(MINUS) AS(EQUAL) &kp LBRC    &kp LBKT    &kp LPAR          &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-                AS(GRAVE) &kp LALT  &trans      AS(COMMA)   &kp COLON         &kp SEMI  AS(DOT)   &none     &kp RALT &trans
-                                    &kp LCTRL   &trans      &trans            &trans    &trans   &kp LCTRL
+                AS(GRAVE) &kp LALT  &trans      AS(COMMA)   &kp COLON         &kp LT    &kp GT    &none     &kp RALT &trans
+                                    &kp LCTRL   &trans      &trans            &trans    &trans    &kp LCTRL
             >;
         };
 
