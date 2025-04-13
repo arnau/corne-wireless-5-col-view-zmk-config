@@ -59,7 +59,7 @@
             bindings = <
                 &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET   &kp AMPS    &kp KP_MULTIPLY  &kp LPAR   &kp RPAR
                 &to 0        &to 1        &to 2        &to 3        &to 4            &kp LEFT    &kp DOWN    &kp UP           &kp RIGHT  &trans 
-                &none        &none        &none        &none        &none            &kp BSPC    &none       &none            &trans     &kp COMMA 
+                &bt BT_SEL 0 &none        &none        &none        &none            &kp BSPC    &none       &none            &trans     &kp COMMA 
                                           &kp LGUI     &trans       &kp LCTRL        &kp ESC     &kp LS(TAB)   &kp TAB
             >;
         };
