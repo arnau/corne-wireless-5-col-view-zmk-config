@@ -57,10 +57,10 @@
             //               | GUI |     | SPC |     | ENT | ESC | TAB |
 
             bindings = <
-                &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-                &none        &none        &none        &none        &none            &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-                &none        &none        &none        &none        &none            &kp BSPC    &to 0    &to 3          &trans    &kp COMMA 
-                                          &kp LGUI     &trans       &kp RET          &kp ESC     &kp LS(TAB)   &kp TAB
+                &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET   &kp AMPS    &kp KP_MULTIPLY  &kp LPAR   &kp RPAR
+                &to 0        &to 1        &to 2        &to 3        &to 4            &kp LEFT    &kp DOWN    &kp UP           &kp RIGHT  &trans 
+                &none        &none        &none        &none        &none            &kp BSPC    &none       &none            &trans     &kp COMMA 
+                                          &kp LGUI     &trans       &kp LCTRL        &kp ESC     &kp LS(TAB)   &kp TAB
             >;
         };
 
@@ -102,6 +102,14 @@
 
         extra_2 {
             status = "reserved";
+            display-name = "Blue";
+            
+            bindings = <
+                &none          &none          &none          &none          &none              &none    &none     &none     &none    &none
+                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &none    &none     &none     &none    &none
+                &none          &none          &none          &none          &none              &none    &none     &none     &none    &none
+                                              &none          &mo 1          &to 0              &none    &none     &none 
+            >;
         };
 
         extra_3 {
