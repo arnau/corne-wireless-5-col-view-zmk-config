@@ -101,7 +101,7 @@
         };
 
         extra_2 {
-            status = "reserved";
+            // status = "reserved";
             display-name = "Blue";
             
             bindings = <
