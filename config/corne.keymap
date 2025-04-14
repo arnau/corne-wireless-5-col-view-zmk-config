@@ -36,15 +36,15 @@
             key-positions = <21 30>;
         };
 
-        combo_f6 {
-            bindings = <&kp F6>;
-            key-positions = <10 11>;
-        };
+        // combo_f6 {
+        //     bindings = <&kp F6>;
+        //     key-positions = <10 11>;
+        // };
 
-        combo_f12 {
-            bindings = <&kp F12>;
-            key-positions = <8 9>;
-        };
+        // combo_f12 {
+        //     bindings = <&kp F12>;
+        //     key-positions = <8 9>;
+        // };
     };
 
     behaviors {
@@ -67,13 +67,13 @@
             // -----------------------------------------------------------------------------------------
             // |  Q    |  W    |  E  | R   | T   |     | Y   | U   | I    | O    | P    |
             // |  A    |  S    |  D  | F   | G   |     | H   | J   | K    | L    | /'   | 
-            // |  Z LC |  X LS |  C  | V   | B   |     | N   | M   | LC+A | , RS | . RC |
+            // |  Z LC |  X LS |  C  | V   | B   |     | N   | M   | ,    | . RS | ; RC |
             //                 | GUI | LWR | ESC |     | SPC | RET | BSPC |
 
             bindings = <
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O             &kp P
                 &kp A         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
-                &mt LCTRL Z   &mt LSHFT X    &kp C       &kp V    &kp B          &kp N        &kp M       &kp LC(A)    &mt RSHFT COMMA   &mt RCTRL DOT
+                &mt LCTRL Z   &mt LSHFT X    &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &mt RCTRL SEMI
                                              &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
             >;
         };
@@ -90,7 +90,7 @@
             bindings = <
                 &kp EXCL      &kp AT       &kp HASH     &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
                 &bt BT_SEL 0  &none        &to 0        &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
-                &kp LCTRL     &kp LSHFT    &none        &none        &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &none      &kp RSHFT  &mt RCTRL SEMI 
+                &kp LCTRL     &kp LSHFT    &kp F6       &kp F12      &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &none      &kp RSHFT  &mt RCTRL SEMI 
                                            &kp LGUI     &trans       &trans              &trans      &kp LS(TAB)   &kp TAB
             >;
         };
@@ -99,15 +99,15 @@
             display-name = "Raise";
 
             // -----------------------------------------------------------------------------------------
-            // | 1! |  2@ |  3# |  4$ |  5% |     | 6^  | 7&  |  8* |  9(  |  0)  |
-            // | -_ |  =+ |  {  |  [  |  (  |     | )   | ]   |  }  |  /?  |  \|  |
-            // | `~ |     |     |  ,< |  :  |     | <   | >   | CTRL| META |      |
-            //            | GUI | ESC | SPC |     | SPC | RET | TAB |
+            // | 1  | 2  | 3  | 4  | 5  |     | 6^  | 7&  | 8*  | 9(  | 0)  |
+            // | -_ | =+ | {  | [  | (  |     |     |     |     | /?  | \|  |
+            // | `~ |    |    |    | :  |     | <   | >   |     | RA  |     |
+            //           | GUI | ESC | SPC |     | SPC | RET | TAB |
 
             bindings = <
                 &kp N1    &kp N2     &kp N3          &kp N4           &kp N5                 &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
                 AS(MINUS) AS(EQUAL)  &mt RBRC LBRC   &mt RBKT LBKT    &mt RPAR LPAR          &none     &none     &none     AS(FSLH)   AS(BSLH)
-                AS(GRAVE) &kp LSHFT  &trans          AS(COMMA)        &kp COLON              &kp LT    &kp GT    &none     &kp RALT   &kp RCTRL
+                AS(GRAVE) &kp LSHFT  &trans          &none            &kp COLON              &kp LT    &kp GT    &none     &kp RALT   &kp RCTRL
                                      &kp LGUI        &trans           &trans                 &trans    &trans    &trans
             >;
         };
