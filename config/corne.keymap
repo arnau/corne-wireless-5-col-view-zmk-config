@@ -31,10 +31,10 @@
             key-positions = <28 35>;
         };  
 
-        combo_lalt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <21 30>;
-        };
+        // combo_lalt {
+        //     bindings = <&kp LEFT_ALT>;
+        //     key-positions = <21 30>;
+        // };
 
         // combo_f6 {
         //     bindings = <&kp F6>;
@@ -63,6 +63,13 @@
             bindings = <&mt LCTRL Z>, <&kp LC(A)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        talt: tap_dance_alt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LALT BSPC>, <&kp RALT>;
+        };
     };
 
     keymap {
@@ -81,7 +88,7 @@
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O             &kp P
                 &kp A         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
                 &lz           &mt LSHFT X    &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &mt RCTRL SEMI
-                                             &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
+                                             &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &talt 
             >;
         };
 
