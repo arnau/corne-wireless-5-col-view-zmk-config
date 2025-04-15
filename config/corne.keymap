@@ -113,12 +113,12 @@
             // | 1  | 2  | 3   | 4   | 5   |     | 6   | 7   | 8   | 9  | 0  |
             // | -_ | =+ | {   | [   | (   |     |     | <   | >   | /? | \| |
             // | `~ |    |     |     | :   |     |     | F6  | F12 | RA | RC |
-            //           | GUI | ESC | SPC |     | SPC | RET | TAB |
+            //           | GUI |     | SPC |     | SPC |     | TAB |
 
             bindings = <
                 &kp N1    &kp N2     &kp N3          &kp N4           &kp N5                 &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
-                AS(MINUS) AS(EQUAL)  &mt RBRC LBRC   &mt RBKT LBKT    &mt RPAR LPAR          &none     &none     &none     AS(FSLH)   AS(BSLH)
-                AS(GRAVE) &kp LSHFT  &trans          &none            &kp COLON              &kp LT    &kp GT    &none     &kp RALT   &kp RCTRL
+                AS(MINUS) AS(EQUAL)  &mt RBRC LBRC   &mt RBKT LBKT    &mt RPAR LPAR          &none     &kp LT    &kp GT    AS(FSLH)   AS(BSLH)
+                AS(GRAVE) &kp LSHFT  &trans          &none            &kp COLON              &none     &kp F6    &kp F12   &kp RALT   &kp RCTRL
                                      &kp LGUI        &trans           &trans                 &trans    &trans    &trans
             >;
         };
