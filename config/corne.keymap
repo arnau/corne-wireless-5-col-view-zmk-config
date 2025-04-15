@@ -26,24 +26,14 @@
         // | 20 | 21 | 22 | 23 | 24 |        | 25 | 26 | 27 | 28 | 29 |
         //           | 30 | 31 | 32 |        | 33 | 34 | 35 |
 
-        combo_ralt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <28 35>;
-        };  
+        // combo_ralt {
+        //     bindings = <&kp RIGHT_ALT>;
+        //     key-positions = <28 35>;
+        // };  
 
-        combo_lalt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <21 30>;
-        };
-
-        // combo_f6 {
-        //     bindings = <&kp F6>;
-        //     key-positions = <10 11>;
-        // };
-
-        // combo_f12 {
-        //     bindings = <&kp F12>;
-        //     key-positions = <8 9>;
+        // combo_lalt {
+        //     bindings = <&kp LEFT_ALT>;
+        //     key-positions = <21 30>;
         // };
     };
 
@@ -57,10 +47,10 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lz: leader_z {
+        ld_a: leader {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LCTRL Z>, <&kp LC(A)>;
+            bindings = <&kp A>, <&kp LC(A)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
@@ -71,11 +61,11 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        talt: tap_dance_alt {
-            compatible = "zmk,behavior-tap-dance";
+        malt_dot: morph_alt_dot {
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LALT BSPC>, <&kp RALT>;
+            bindings = <&mt RSHFT DOT>, <&sk RALT>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
 
@@ -93,8 +83,8 @@
 
             bindings = <
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O             &kp P
-                &kp A         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
-                &lz           &malt_x        &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &mt RCTRL SEMI
+                &ld_a         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
+                &mt LCTRL Z   &malt_x        &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &malt_dot         &mt RCTRL SEMI
                                              &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
             >;
         };
@@ -103,15 +93,15 @@
             display-name = "Lower";
 
             // -----------------------------------------------------------------------------------------
-            // | !   | @  | #  | $   | %   |      |          | ^   | &      | *   | (   | ) |
-            // | BT0 | LS | L0 | L3  | L4  |      |          | LFT | DWN    | UP  | RGT | = |
-            // | LC  | LA |    |     |     | LG+` |          | |   | /      |     | RA  | ; |
-            //                 | GUI |     | ESC  |          | SPC | LS+TAB | TAB |
+            // | !   | @  | #   | $    | %   |          | ^   | &      | *   | (   | )    |
+            // | BT0 | LS | L0  | L3   | L4  |          | LFT | DWN    | UP  | RGT | =    |
+            // | LC  | LS |     | LC+A | LG+`|          | |   | /      |     | RS  | ; RC |
+            //            | GUI |      | ESC |          | SPC | LS+TAB | TAB |
 
             bindings = <
                 &kp EXCL      &kp AT       &kp HASH     &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
                 &bt BT_SEL 0  &none        &to 0        &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
-                &kp LCTRL     &kp LSHFT    &kp F6       &kp F12      &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &none      &kp RSHFT  &mt RCTRL SEMI 
+                &kp LCTRL     &kp LSHFT    &none        &kp LC(A)    &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &none      &kp RSHFT  &mt RCTRL SEMI 
                                            &kp LGUI     &trans       &trans              &trans      &kp LS(TAB)   &kp TAB
             >;
         };
@@ -120,9 +110,9 @@
             display-name = "Raise";
 
             // -----------------------------------------------------------------------------------------
-            // | 1  | 2  | 3  | 4  | 5  |     | 6^  | 7&  | 8*  | 9(  | 0)  |
-            // | -_ | =+ | {  | [  | (  |     |     |     |     | /?  | \|  |
-            // | `~ |    |    |    | :  |     | <   | >   |     | RA  |     |
+            // | 1  | 2  | 3   | 4   | 5   |     | 6   | 7   | 8   | 9  | 0  |
+            // | -_ | =+ | {   | [   | (   |     |     | <   | >   | /? | \| |
+            // | `~ |    |     |     | :   |     |     | F6  | F12 | RA | RC |
             //           | GUI | ESC | SPC |     | SPC | RET | TAB |
 
             bindings = <
