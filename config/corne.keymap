@@ -54,18 +54,11 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        malt_x: morph_alt_x {
+        malt: morph_alt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LSHFT X>, <&kp LALT>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        malt_dot: morph_alt_dot {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mt RSHFT DOT>, <&sk RALT>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
+            bindings = <&mt RCTRL SEMI>, <&sk LALT>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -84,7 +77,7 @@
             bindings = <
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O             &kp P
                 &ld_a         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
-                &mt LCTRL Z   &malt_x        &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &malt_dot         &mt RCTRL SEMI
+                &mt LCTRL Z   &mt LSHFT X    &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &malt
                                              &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
             >;
         };
@@ -101,7 +94,7 @@
             bindings = <
                 &kp EXCL      &kp AT       &kp HASH     &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
                 &bt BT_SEL 0  &none        &to 0        &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
-                &kp LCTRL     &kp LSHFT    &none        &kp LC(A)    &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &none      &kp RSHFT  &mt RCTRL SEMI 
+                &kp LCTRL     &kp LSHFT    &none        &kp LC(A)    &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &sk RALT   &kp RSHFT  &mt RCTRL SEMI 
                                            &kp LGUI     &trans       &trans              &trans      &kp LS(TAB)   &kp TAB
             >;
         };
