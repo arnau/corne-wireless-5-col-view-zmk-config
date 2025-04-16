@@ -92,8 +92,8 @@
             //             | GUI |     | ESC |          | SPC | LS+TAB | TAB |
 
             bindings = <
-                &kp EXCL      &kp AT       &kp HASH     &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
-                &kp LC(A)     &to 0        &kp RA(HASH) &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
+                &kp EXCL      &kp AT       &kp RA(N3)   &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
+                &kp LC(A)     &to 0        &kp HASH     &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
                 &kp LCTRL     &kp LSHFT    &none        &none        &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &sk RALT   &kp RSHFT  &kp SEMI 
                                            &trans       &trans       &trans              &trans      &kp LS(TAB)   &kp TAB
             >;
