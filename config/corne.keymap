@@ -105,13 +105,13 @@
             // -----------------------------------------------------------------------------------------
             // | 1  | 2  | 3   | 4   | 5   |     | 6   | 7   | 8   | 9   | 0   |
             // | -_ | =+ | [   | {   | (   |     | F6  | <   | >   | /?  | \|  |
-            // | `~ |    |     |     | :   |     | F12 |     | RA* | RS* | RC* |
+            // | `~ |    |     |     | :   |     | F12 | LA* | RA* | RS* | RC* |
             //           | GUI |     | SPC |     | SPC |     |     |
 
             bindings = <
                 &kp N1    &kp N2     &kp N3          &kp N4           &kp N5                 &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
                 AS(MINUS) AS(EQUAL)  &mt RBKT LBKT   &mt RBRC LBRC    &mt RPAR LPAR          &kp F6    &kp LT    &kp GT    AS(FSLH)   AS(BSLH)
-                AS(GRAVE) &kp LSHFT  &trans          &none            &kp COLON              &kp F12   &none     &sk RALT  &sk RSHFT  &sk RCTRL
+                AS(GRAVE) &kp LSHFT  &trans          &none            &kp COLON              &kp F12   &sk LALT  &sk RALT  &sk RSHFT  &sk RCTRL
                                      &trans          &trans           &trans                 &trans    &trans    &trans
             >;
         };
