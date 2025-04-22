@@ -120,16 +120,16 @@
             display-name = "Numpad";
 
             // -----------------------------------------------------------------------------------------
-            // |    |  #  |  ~  |  (  | )  |         |  \  |  7  |  8   |  9  |  ,  |
-            // |    |     |  *  |  +  | =  |         |  0  |  4  |  5   |  6  |  .  |
-            // |    |     |  /  |  -  |    |         |  ;  |  1  |  2   |  3  |  /  |
-            //            | GUI | LWR | L0 |         | SPC | RET | BSPC |
+            // |    | #  | ~   |  (  | )  |         | \  | &7 | *8 | (9 | , |
+            // |    | /  | *   |  +  | -  |         | )0 | $4 | %5 | ^6 | . |
+            // | LC | LS | LA  |  =  |    |         | ;  | !1 | @2 | #3 | / |
+            //           | GUI | LWR | L0 |         | SPC | RET | BSPC |
 
             bindings = <
-                &none     &kp HASH  &kp TILDE2        &kp KP_LPAR     &kp KP_RPAR       &kp BSLH    &kp KP_N7   &kp KP_N8   &kp KP_N9    &kp COMMA
-                &none     &none     &kp KP_MULTIPLY   &kp KP_PLUS     &kp EQL           &kp KP_N0   &kp KP_N4   &kp KP_N5   &kp KP_N6    &kp DOT
-                &kp LCTRL &kp LSHFT &kp KP_DIVIDE     &kp KP_MINUS    &none             &kp SEMI    &kp KP_N1   &kp KP_N2   &kp KP_N3    &kp KP_DIVIDE
-                                    &kp LGUI          &mo 1           &to 0             &kp SPACE   &kp RET     &kp BSPC 
+                &none     &kp HASH       &kp TILDE2       &kp KP_LPAR   &kp KP_RPAR       &kp BSLH         &mt AMPS KP_N7   &mt ASTRK KP_N8   &mt LPAR KP_N9    &kp COMMA
+                &none     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_PLUS   &kp KP_MINUS      &mt RPAR KP_N0   &mt DLLR KP_N4   &mt PRCNT KP_N5   &mt CARET KP_N6   &kp DOT
+                &kp LCTRL &kp LSHFT      &kp LALT         &kp EQL       &none             &kp SEMI         &mt EXCL KP_N1   &mt AT KP_N2      &mt RA(N3) KP_N3  &sk RALT
+                                         &kp LGUI         &mo 1         &to 0             &kp SPACE        &kp RET     &kp BSPC 
             >;
         };
 
