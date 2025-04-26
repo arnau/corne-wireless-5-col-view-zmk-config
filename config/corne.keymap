@@ -57,7 +57,7 @@
         malt: morph_alt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt RCTRL SEMI>, <&sk LALT>;
+            bindings = <&mt RCTRL SEMI>, <&sk RALT>;
             mods = <(MOD_RSFT)>;
         };
     };
@@ -69,15 +69,15 @@
             display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
-            // |  Q    |  W    |  E  | R   | T   |     | Y   | U   | I    | O    | P        |
-            // |  A    |  S    |  D  | F   | G   |     | H   | J   | K    | L    | /'       | 
-            // |  Z LC |  X LS |  C  | V   | B   |     | N   | M   | ,    | . RS | ; RC[LA] |
+            // |  Q    |  W    |  E    | R   | T   |     | Y   | U   | I    | O    | P        |
+            // |  A    |  S    |  D    | F   | G   |     | H   | J   | K    | L    | /'       | 
+            // |  Z LC |  X LS |  C LA | V   | B   |     | N   | M   | ,    | . RS | ; RC[LA] |
             //                 | GUI | LWR | ESC |     | SPC | RET | BSPC |
 
             bindings = <
                 &kp Q         &kp W          &kp E       &kp R    &kp T          &kp Y        &kp U       &kp I        &kp O             &kp P
                 &ld_a         &kp S          &kp D       &kp F    &kp G          &kp H        &kp J       &kp K        &kp L             &mt FSLH SQT
-                &mt LCTRL Z   &mt LSHFT X    &kp C       &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &malt
+                &mt LCTRL Z   &mt LSHFT X    &mt LALT C  &kp V    &kp B          &kp N        &kp M       &kp COMMA    &mt RSHFT DOT     &malt
                                              &kp LGUI    &mo 1    &lt 3 ESC      &kp SPACE    &lt 2 RET   &kp BSPC 
             >;
         };
@@ -88,13 +88,13 @@
             // -----------------------------------------------------------------------------------------
             // | !    | @  | £   | $   | %   |          | ^   | &      | *   | (   | )  |
             // | LC+A | L0 | #   | L3  | L4  |          | LFT | DWN    | UP  | RGT | =  |
-            // | LC   | LS |     |     | LG+`|          | |   | /      |     | RS  | ;  |
+            // | LC   | LS | LA  |     | LG+`|          | |   | /      |     | RS  | ;  |
             //             | GUI |     | ESC |          | SPC | LS+TAB | TAB |
 
             bindings = <
                 &kp EXCL      &kp AT       &kp RA(N3)   &kp DLLR     &kp PRCNT           &kp CARET   &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR
                 &kp LC(A)     &to 0        &kp HASH     &to 3        &to 4               &kp LEFT    &kp DOWN      &kp UP     &kp RIGHT  &kp EQUAL 
-                &kp LCTRL     &kp LSHFT    &none        &none        &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &sk RALT   &kp RSHFT  &kp SEMI 
+                &kp LCTRL     &kp LSHFT    &kp LALT     &none        &kp LG(GRAVE)       &kp PIPE    &kp FSLH      &sk RALT   &kp RSHFT  &kp SEMI 
                                            &trans       &trans       &trans              &trans      &kp LS(TAB)   &kp TAB
             >;
         };
